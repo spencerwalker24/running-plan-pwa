@@ -1,33 +1,47 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 1em;
-  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 h1 {
   text-align: center;
 }
 .week {
-  background: #fff;
-  margin: 1em 0;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
-.week h2 {
-  margin: 0;
+.week-header {
+  background-color: #eee;
+  padding: 10px;
   cursor: pointer;
 }
 .days {
   display: none;
-  margin-top: 1em;
+  padding-left: 20px;
 }
 .day {
-  padding: 0.5em;
-  border-bottom: 1px solid #eee;
+  padding: 5px;
   cursor: pointer;
 }
 .day.completed {
   text-decoration: line-through;
   color: gray;
+}
+#progress-container {
+  margin: 20px 0;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  height: 20px;
+  position: relative;
+}
+#progress-bar {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+}
+#progress-text {
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+#reset-button {
+  margin-bottom: 20px;
 }

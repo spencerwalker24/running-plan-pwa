@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running Plan PWA</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Running Plan</title>
 </head>
 <body>
-  <h1>🏃‍♂️ 4-Week Running Plan</h1>
-  <div id="plan"></div>
-
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
+  <h1>Running Plan</h1>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <span id="progress-text">0% Complete</span>
+  </div>
+  <button id="reset-button">Reset Progress</button>
+  <div id="plan">
+    <!-- Weeks and days will be dynamically inserted here -->
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
