@@ -2,28 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Running Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
+  <title>Running Plan</title>
 </head>
 <body>
-  <h1>4-Week Running Plan</h1>
+  <h1>🏃‍♂️ 4-Week Running Plan</h1>
   <div id="plan"></div>
-  <script src="service-worker.js"></script>
+
+  <script src="app.js"></script>
   <script>
-    const plan = [
-      ["1.5-mile easy run", "Rest", "2-mile run/walk intervals", "Cross-training", "2-mile easy run", "Optional walk", "2.5-mile easy run"],
-      ["2-mile steady run", "Rest", "2.5-mile run/walk intervals", "Cross-training", "3-mile easy run", "Rest", "3-mile long run"],
-      ["2-mile run + strides", "Rest", "3-mile run/walk intervals", "Cross-training", "3-mile steady run", "Rest", "3.5-mile long run"],
-      ["3-mile run + strides", "Rest", "3.5-mile tempo run", "Cross-training", "3-mile easy run", "Rest", "4-mile long run"]
-    ];
-    const container = document.getElementById("plan");
-    plan.forEach((week, i) => {
-      const weekDiv = document.createElement("div");
-      weekDiv.innerHTML = `<h2>Week ${i + 1}</h2><ul>` + week.map(day => `<li>${day}</li>`).join("") + "</ul>";
-      container.appendChild(weekDiv);
-    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
   </script>
 </body>
 </html>

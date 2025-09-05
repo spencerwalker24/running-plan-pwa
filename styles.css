@@ -1,21 +1,33 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f4;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1em;
+  background: #f9f9f9;
 }
 h1 {
-  color: #4CAF50;
+  text-align: center;
 }
-h2 {
-  margin-top: 20px;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
+.week {
   background: #fff;
-  margin: 5px 0;
-  padding: 10px;
-  border-left: 5px solid #4CAF50;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.week h2 {
+  margin: 0;
+  cursor: pointer;
+}
+.days {
+  display: none;
+  margin-top: 1em;
+}
+.day {
+  padding: 0.5em;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.day.completed {
+  text-decoration: line-through;
+  color: gray;
 }
